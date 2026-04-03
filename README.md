@@ -159,7 +159,4 @@ sudo cp ~/repo/kiro-avx2-fix/lancedb/target/release/liblancedb_node.so "$LANCEDB
 
 ---
 
-## License
-
-MIT
 
