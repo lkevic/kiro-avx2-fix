@@ -109,10 +109,6 @@ echo "Done. Restart Kiro."
 
 ## Additional notes
 
-### Why not just lower the baseline for everyone?
-
-Compiling with a lower CPU baseline (e.g. generic x86-64) would reduce performance for all users since LanceDB heavily uses vector math operations — exactly what AVX2 accelerates. The right long-term fix would be for Kiro/LanceDB to ship a separate legacy build or implement runtime CPU dispatch.
-
 ### arrow-arith patch
 
 LanceDB 0.4.20 fails to compile with Rust 1.94+ due to an ambiguous method call in `arrow-arith`. The `quarter()` method now exists in multiple traits, causing an `E0034` error. The fix is to qualify the call explicitly:
